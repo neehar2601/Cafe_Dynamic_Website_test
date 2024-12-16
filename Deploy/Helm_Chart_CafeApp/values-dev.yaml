@@ -21,4 +21,3 @@ config:
   db_name: "mom_pop_db"
   db_user: "root"
   db_password: "Msois@123"
-
