@@ -1,0 +1,21 @@
+apiVersion: flagger.app/v1beta1
+kind: Canary
+metadata:
+  name: {{ .Release.Name }}-canary
+  namespace: default
+spec:
+  targetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ .Release.Name }}-cafeweb
+  service:
+    port: 80
+  canaryAnalysis:
+    interval: 1m
+    threshold: 5
+    stepWeight: 10
+    metrics:
+      - name: request-success-rate
+        threshold: 99
+      - name: request-duration
+        threshold: 500
