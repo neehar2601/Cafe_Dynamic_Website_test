@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cafeapp
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/neehar2601/Cafe_Dynamic_Website.git'
+    targetRevision: HEAD
+    path: CafeApp
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
