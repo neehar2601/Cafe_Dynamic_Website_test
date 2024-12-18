@@ -10,7 +10,7 @@ data:
     $showServerInfo = "{{ .Values.config.showServerInfo }}";
     $timeZone = "{{ .Values.config.timeZone }}";
     $currency = "{{ .Values.config.currency }}";
-    $db_url = "{{ .Values.config.db_url }}";
+    $db_url = "{{ .Release.Name }}-mysql";
     $db_name = "{{ .Values.config.db_name }}";
     $db_user = "{{ .Values.config.db_user }}";
     $db_password = "{{ .Values.config.db_password }}";
