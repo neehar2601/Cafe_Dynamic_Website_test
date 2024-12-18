@@ -1,4 +1,3 @@
-cafeweb-canary1.yaml 
 apiVersion: flagger.app/v1beta1
 kind: Canary
 metadata:
