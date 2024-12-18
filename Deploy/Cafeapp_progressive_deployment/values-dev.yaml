@@ -7,7 +7,7 @@ mysql:
 
 cafeweb:
   image: sreedocker123/mompopcafeapp
-  tag: v3
+  tag: v2
 
 persistentVolume:
   size: 10Gi
