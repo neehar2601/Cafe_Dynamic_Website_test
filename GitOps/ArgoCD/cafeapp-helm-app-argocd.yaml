@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/sreepathysois/Cafe_Dynamic_Website.git'
+    repoURL: 'https://github.com/neehar2601/Cafe_Dynamic_Website_test.git'
     targetRevision: HEAD
-    path: Deploy/Helm_Chart_CafeApp
+    path: Deploy/Cafeapp_progressive_deployment
     helm:
       valueFiles:
         - values-dev.yaml
